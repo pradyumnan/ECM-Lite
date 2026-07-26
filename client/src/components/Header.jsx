@@ -1,8 +1,10 @@
+import "./Header.css";
 function Header() {
   return (
-    <header>
+    <header className="header">
       <h1>ECM Lite</h1>
-      <h2>Enterprise Content Management System</h2>
+
+      <p>Enterprise Content Management System</p>
     </header>
   );
 }
