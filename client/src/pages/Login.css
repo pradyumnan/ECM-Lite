@@ -116,3 +116,11 @@
 .form-group input::placeholder{
     color:#9ca3af;
 }
+
+.error-message{
+    color:#ff5c5c;
+    font-size:14px;
+    margin-top:10px;
+    margin-bottom:10px;
+    text-align:center;
+}
