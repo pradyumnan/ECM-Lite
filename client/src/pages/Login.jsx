@@ -1,5 +1,7 @@
 import "./Login.css";
 import { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
 
@@ -10,6 +12,10 @@ function Login() {
     const [error, setError] = useState("");
 
     const [loading, setLoading] = useState(false);
+
+    const [message, setMessage] = useState("");
+
+    const navigate = useNavigate();
 
   return (
     <div className="login-page">
@@ -54,6 +60,14 @@ function Login() {
                     </p>
                 )
         }
+        
+                            {
+            message && (
+                <p className="success-message">
+                    {message}
+                </p>
+            )
+        }
 
         <button
             className="login-btn"
@@ -68,38 +82,66 @@ function Login() {
     </div>
   );
 
-        function handleLogin() {
+async function handleLogin() {
 
-            if (username.trim() === "") {
+    if (username.trim() === "") {
+        setError("Username is required");
+        return;
+    }
 
-                setError("Username is required");
-                return;
+    if (password.trim() === "") {
+        setError("Password is required");
+        return;
+    }
 
+    setError("");
+
+    try {
+
+        console.log("Sending request to backend...");
+
+        const response = await axios.post(
+            "http://localhost:5000/api/login",
+            {
+                username,
+                password
             }
+        );
 
-            if (password.trim() === "") {
+        setMessage(response.data.message);
 
-                setError("Password is required");
-                return;
+        localStorage.setItem(
+            "user",
+            JSON.stringify(response.data.user)
+        );
 
-            }
-
-            setError("");
-
-
-            setLoading(true);
-
-            console.log("Logging in...");
+        setError("");
 
                 setTimeout(() => {
 
-                console.log("Login Successful");
+            navigate("/dashboard");
 
-                setLoading(false);
+        }, 1000);
 
-            }, 3000);
+    } 
+
+        catch(error){
+
+        if(error.response){
+
+            setError(error.response.data.message);
 
         }
+        else{
+
+            setError("Server is not reachable");
+
+        }
+
+        setMessage("");
+
+    }
+}
 
 }
 

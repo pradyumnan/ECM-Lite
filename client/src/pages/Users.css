@@ -1,0 +1,169 @@
+.users-container {
+    padding: 30px;
+}
+
+.users-title {
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* ===========================
+   User Form
+=========================== */
+
+.user-form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-form input,
+.user-form select {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    min-width: 180px;
+    font-size: 15px;
+    outline: none;
+}
+
+.user-form button {
+    padding: 10px 22px;
+    background: #2f6fed;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.user-form button:hover {
+    background: #1d57c7;
+}
+
+/* ===========================
+   Table
+=========================== */
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.users-table thead {
+    background: #2f3642;
+}
+
+.users-table th,
+.users-table td {
+    padding: 14px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.users-table th {
+    color: white;
+    font-size: 16px;
+}
+
+.users-table td {
+    border-bottom: 1px solid #444;
+}
+
+.users-table tr:hover {
+    background: #2b303b;
+}
+
+/* Column Widths */
+
+.users-table th:nth-child(1),
+.users-table td:nth-child(1) {
+    width: 70px;
+}
+
+.users-table th:nth-child(2),
+.users-table td:nth-child(2) {
+    width: 180px;
+}
+
+.users-table th:nth-child(3),
+.users-table td:nth-child(3) {
+    width: 240px;
+}
+
+.users-table th:nth-child(4),
+.users-table td:nth-child(4) {
+    width: 120px;
+}
+
+.users-table th:nth-child(5),
+.users-table td:nth-child(5) {
+    width: 220px;
+}
+
+/* ===========================
+   Action Buttons
+=========================== */
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.edit-btn {
+    background: #f0ad4e;
+}
+
+.edit-btn:hover {
+    background: #d89226;
+}
+
+.delete-btn {
+    background: #ff4d4d;
+}
+
+.delete-btn:hover {
+    background: #d93636;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 900px) {
+
+    .user-form {
+        flex-direction: column;
+    }
+
+    .user-form input,
+    .user-form select,
+    .user-form button {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .users-table {
+        font-size: 14px;
+    }
+}

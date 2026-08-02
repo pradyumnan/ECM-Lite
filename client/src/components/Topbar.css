@@ -1,0 +1,55 @@
+.topbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 40px;
+
+    background:#2d313d;
+
+    border-bottom:1px solid #444;
+
+}
+
+.topbar h3{
+
+    color:white;
+
+    margin:0;
+
+}
+
+.topbar p{
+
+    color:#aaa;
+
+    margin-top:5px;
+
+}
+
+.logout-btn{
+
+    background:#ff4d4f;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 20px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+}
+
+.logout-btn:hover{
+
+    background:#d9363e;
+
+}

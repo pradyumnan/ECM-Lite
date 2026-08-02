@@ -124,3 +124,21 @@
     margin-bottom:10px;
     text-align:center;
 }
+
+.success-message{
+
+    color:#32cd32;
+    text-align:center;
+    font-weight:600;
+    margin-bottom:20px;
+
+}
+
+.error-message{
+
+    color:#ff4d4d;
+    text-align:center;
+    font-weight:600;
+    margin-bottom:20px;
+
+}
