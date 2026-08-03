@@ -6,6 +6,7 @@ dotenv.config();
 
 const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
+const documentRoutes = require("./routes/documentRoutes");
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use(express.json());
 
 app.use("/api", authRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api/documents", documentRoutes);
 
 app.get("/", (req, res) => {
     res.send("ECM Lite Backend Running");

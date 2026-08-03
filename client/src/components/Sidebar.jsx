@@ -19,6 +19,8 @@ function Sidebar() {
 
             <NavLink to="/settings">Settings</NavLink>
 
+            <NavLink to="/documents">Documents</NavLink>
+
         </div>
 
     );

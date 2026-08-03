@@ -1,0 +1,128 @@
+.documents-container{
+
+    padding:30px;
+
+}
+
+.documents-title{
+
+    margin-bottom:25px;
+
+}
+
+.search-box{
+
+    width:350px;
+    padding:10px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:5px;
+
+}
+
+.documents-table{
+
+    width:100%;
+    border-collapse:collapse;
+
+
+}
+
+.documents-table th{
+
+    background:#2f3642;
+    color:white;
+    padding:14px;
+    text-align:left;
+
+}
+
+.documents-table td{
+
+    padding:14px;
+    border-bottom:1px solid #444;
+    vertical-align:middle;
+
+}
+
+.documents-table tr:hover{
+
+    background:#2b303b;
+
+}
+
+/* Action column */
+.documents-table th:last-child,
+.documents-table td:last-child{
+
+    width:180px;
+    text-align:center;
+
+}
+
+/* Button container */
+.action-buttons{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+
+}
+
+/* Common button style */
+.download-btn,
+.delete-btn{
+
+    min-width:90px;
+    padding:8px 14px;
+    border:none;
+    border-radius:5px;
+    color:white;
+    cursor:pointer;
+    font-size:14px;
+
+}
+
+/* Download button */
+.download-btn{
+
+    background:#2f6fed;
+
+}
+
+.download-btn:hover{
+
+    background:#2558bb;
+
+}
+
+/* Delete button */
+.delete-btn{
+
+    background:#ff4d4d;
+
+}
+
+.delete-btn:hover{
+
+    background:#d93636;
+
+}
+
+.filename{
+
+    max-width:280px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+
+}
+
+.action-buttons{
+
+    display:flex;
+    gap:8px;
+    justify-content:center;
+
+}

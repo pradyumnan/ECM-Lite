@@ -11,6 +11,7 @@ import Users from "./pages/Users";
 import Settings from "./pages/Settings";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { ToastContainer } from "react-toastify";
+import Documents from "./pages/Documents";
 
 function App() {
 
@@ -39,6 +40,8 @@ function App() {
                 <Route path="/users" element={<ProtectedRoute><Users /></ProtectedRoute>} />
 
                 <Route path="/settings" element={<ProtectedRoute><Settings /></ProtectedRoute>} />
+                
+                <Route path="/documents" element={<ProtectedRoute><Documents /></ProtectedRoute>} />
 
             </Routes>
 
